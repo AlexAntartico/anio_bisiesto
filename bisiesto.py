@@ -1,23 +1,21 @@
 #!/bin/python3
+#-*- coding: utf-8-*-
 
-#input data
-anio = int(input("Cual es el año a verificar?\n"))
+año = int(input("Cual es el año a verificar?\n"))
 
-#output data
 def exito():
-    print ("El año ingresado ", anio, " es bisiesto")
-    pass
+    print ("El año ingresado {} es bisiesto".format(año))
 
 def fallo ():
-    print ("El año ingresado ", anio, " no es bisiesto")
-    pass
+    print ("El año ingresado {} no es bisiesto".format(año))
 
 #algo
-def comprobar_anio():
-    if ((anio % 4 == 0 ) and (anio % 100 != 0)) or (anio % 400 == 0):
+def comprobar_año():
+    if ((año % 4 == 0 ) and (año % 100 != 0)) or (año % 400 == 0):
         exito()
     else:
         fallo()
     pass
 
-comprobar_anio()
+if __name__ == '__main__':
+    comprobar_año()
