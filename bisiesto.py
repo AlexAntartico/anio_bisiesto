@@ -4,18 +4,18 @@
 año = int(input("Cual es el año a verificar?\n"))
 
 def exito():
-    print ("El año ingresado {} es bisiesto".format(año))
+    print(f"El año ingresado {año} es bisiesto")
 
 def fallo ():
-    print ("El año ingresado {} no es bisiesto".format(año))
+    print(f"El año ingresado {año} no es bisiesto")
 
-#algo
-def comprobar_año():
+def run():
     if ((año % 4 == 0 ) and (año % 100 != 0)) or (año % 400 == 0):
         exito()
     else:
         fallo()
     pass
 
+
 if __name__ == '__main__':
-    comprobar_año()
+    run()
